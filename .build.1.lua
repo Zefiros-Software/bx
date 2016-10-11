@@ -2,40 +2,29 @@ project "bgfx"
 
     kind "StaticLib"
  
+    files 
+    {
+	"include/**.h",
+	"include/**.inl",
+    }
+  
+    -- dummy to prevent error on osx
+    files 
+    {
+     	"extern/dummy.cpp"
+    }  
 
-    includedirs {
-       "include",
-       "src"
+    includedirs 
+    {
+        "include"
     }
 
-    -- generic
-    files {
-       "include/SFML/System/*.inl",
-       "src/SFML/System/*.cpp"
-    }
-
-    filter "system:windows"
-
-
-    filter "system:linux"
-
-
-    filter "system:macosx"
-
-    
-    filter "action:android"
-
-
-    filter {} 
 
     zpm.export(function()
 
-        filter "system:macosx"
-
-        filter {}
-
         includedirs 
 	{
+	    "include"
         }
      
  
