@@ -27,5 +27,21 @@ project "bgfx"
 	    "include"
         }
      
+	filter { "system:windows", "not action:android" }
+
+	     includedirs
+             {
+                  "include/compat/msvc"
+             }
+
+	filter { "system:macosx", "not action:ios" }
+
+	      includedirs { "include/compat/osx" }
+
+    	filter "action:ios"
+
+	      includedirs { "include/compat/ios" }
+
+	filter {}
  
     end)
