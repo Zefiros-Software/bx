@@ -1,52 +1,36 @@
-project "bgfx"
+project "bx"
 
     kind "StaticLib"
  
-    files 
-    {
-	"include/**.h",
-	"include/**.inl",
+    files {
+        "include/**.h",
+        "include/**.inl",
     }
   
-    includedirs 
-    {
+    includedirs {
         "include"
     }
 
-
     zpm.export(function()
 
-        includedirs 
-	{
-	    "include"
+        includedirs {
+	        "include"
         }
      
-	filter { "system:windows", "not action:android" }
+	    filter { "system:windows", "not action:android" }
+            includedirs "include/compat/msvc"
 
-
-	     includedirs
-             {
-                  "include/compat/msvc"
-             }
-
-	filter { "system:macosx", "not action:ios" }
-	
-	
-	      includedirs { "include/compat/osx" }
+	    filter { "system:macosx", "not action:ios" }
+            includedirs "include/compat/osx"
 
         filter "system:linux"
 
- 
     	filter "action:ios"
-
-
-	      includedirs { "include/compat/ios" }
+	      includedirs "include/compat/ios"
 
         filter "action:android"
+            includedirs { "include/compat/ANDROID" }
 
-
-              includedirs { "include/compat/ANDROID" }
-
-	filter {}
+        filter {}
  
     end)
