@@ -16,3 +16,9 @@ In `premake5.lua`
 ```lua
 zpm.uses "Zefiros-Software/bx"
 ```
+
+# Status
+Type        | Status
+----------- | -------
+Linux & OSX | [![Build Status](https://travis-ci.org/Zefiros-Software/bx.svg?branch=master)](https://travis-ci.org/Zefiros-Software/bx)
+Windows     | [![Build status](https://ci.appveyor.com/api/projects/status/dxnsegmtlkx7qpnr?svg=true)](https://ci.appveyor.com/project/Zefiros-Software/bx)
