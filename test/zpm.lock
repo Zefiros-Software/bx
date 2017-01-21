@@ -1,0 +1,12 @@
+
+{
+    "dependencies": [ 
+    {
+        "hash": "f6d30c727fd6705a20ca6956e690a529b718967a",
+        "name": "Zefiros-Software/bx",
+        "tag": "master",
+        "type": "library",
+        "version": "@head"
+    }],
+    "name": "Zefiros-Software/bx-Dev"
+}

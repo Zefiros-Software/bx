@@ -1,0 +1,10 @@
+{
+    "name": "Zefiros-Software/bx-Dev",
+    "requires": [
+        {
+            "name": "Zefiros-Software/bx",
+            "version": "@head",
+            "buildpath": "../"
+        }
+    ]
+}

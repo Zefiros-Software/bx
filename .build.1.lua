@@ -5,11 +5,11 @@ project "bx"
     files {
         "include/**.h",
         "include/**.inl",
-	"src/**.cpp"
+	    "src/**.cpp"
     }
 
     defines {
-	"__STDC_FORMAT_MACROS"
+        "__STDC_FORMAT_MACROS"
     }
   
     includedirs {
