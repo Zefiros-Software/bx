@@ -18,6 +18,8 @@ project "bx"
 
     zpm.export(function()
 
+        flags "C++11"
+
         includedirs {
 	        "include"
         }
