@@ -1,9 +1,6 @@
 
 workspace "bx"
    configurations { "Test" }
-
-   characterset "MBCS"
-
    startproject "bx"
 
     project "bx"

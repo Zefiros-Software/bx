@@ -2,6 +2,8 @@ project "bx"
 
     kind "StaticLib"
  
+    characterset "MBCS"
+
     files {
         "include/**.h",
         "include/**.inl",
