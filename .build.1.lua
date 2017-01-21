@@ -7,6 +7,10 @@ project "bx"
         "include/**.inl",
 	"src/**.cpp"
     }
+
+    defines {
+	"__STDC_FORMAT_MACROS"
+    }
   
     includedirs {
         "include"
