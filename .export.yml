@@ -22,7 +22,11 @@ export: |
 
             cppdialect "C++11"
 
-            includedirs "include"
+            defines "__STDC_FORMAT_MACROS"
+            includedirs {
+                "3rdparty",
+                "include"
+            }
         
             filter { "system:windows", "not action:android" }
                 includedirs "include/compat/msvc"
