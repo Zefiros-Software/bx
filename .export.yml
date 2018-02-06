@@ -18,7 +18,7 @@ export: |
 
         zpm.export(function()
 
-            cppdialect "C++14"
+            cppdialect "C++11"
 
             defines "__STDC_FORMAT_MACROS"
             includedirs {
