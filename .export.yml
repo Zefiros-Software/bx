@@ -9,7 +9,7 @@ export: |
             "src/**.cpp"
         }
 
-        removefiles "src/amalgated.**"
+        removefiles "src/amalgamated.**"
 
         filter "system:linux"
             pic "on"
