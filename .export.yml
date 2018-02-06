@@ -1,0 +1,39 @@
+version: "@head"
+export: |
+    project "bx"
+        kind "StaticLib"
+    
+        files {
+            "include/**.h",
+            "include/**.inl",
+            "src/**.cpp"
+        }
+
+        filter "system:linux"
+            buildoptions {
+                "-fPIC",
+            }
+            
+        filter {}
+
+        zpm.export(function()
+
+            cppdialect "C++11"
+
+            includedirs "include"
+        
+            filter { "system:windows", "not action:android" }
+                includedirs "include/compat/msvc"
+
+            filter { "system:macosx", "not action:ios" }
+                includedirs "include/compat/osx"
+
+            filter "action:ios"
+                includedirs "include/compat/ios"
+
+            filter "action:android"
+                includedirs "include/compat/ANDROID"
+
+            filter {}
+    
+        end)
