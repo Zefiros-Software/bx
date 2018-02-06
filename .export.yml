@@ -12,9 +12,7 @@ export: |
         removefiles "src/amalgated.**"
 
         filter "system:linux"
-            buildoptions {
-                "-fPIC",
-            }
+            pic "on"
             
         filter {}
 
