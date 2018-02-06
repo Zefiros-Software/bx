@@ -9,6 +9,8 @@ export: |
             "src/**.cpp"
         }
 
+        removefiles "src/amalgated.**"
+
         filter "system:linux"
             buildoptions {
                 "-fPIC",
